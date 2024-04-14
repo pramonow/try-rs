@@ -3,6 +3,18 @@ use std::cmp::Ordering;
 use std::io;
 
 fn main() {
+    let mut x = 5;
+    println!("x is {x}");
+
+    x = plus_one(x);
+    println!("x now is {x}");
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
+}
+
+fn test(){
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
